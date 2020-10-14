@@ -1,0 +1,18 @@
+{
+    "idleHeartbeats": 962,
+    "navigatingHeartbeats": 249,
+    "totalCodingHeartbeats": 1265,
+    "languageHeartbeats": {
+        "javascript": 1206,
+        "json": 53,
+        "ignore": 6
+    },
+    "fileHeartbeats": {
+        "config/dbconnect.js": 60,
+        "package.json": 53,
+        "index.js": 325,
+        "models/User.js": 89,
+        "db/dbuser.js": 732,
+        ".gitignore": 6
+    }
+}
