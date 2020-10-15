@@ -1,18 +1,18 @@
 {
-    "idleHeartbeats": 962,
-    "navigatingHeartbeats": 249,
-    "totalCodingHeartbeats": 1265,
+    "idleHeartbeats": 4331,
+    "navigatingHeartbeats": 1099,
+    "totalCodingHeartbeats": 4625,
     "languageHeartbeats": {
-        "javascript": 1206,
+        "javascript": 4566,
         "json": 53,
         "ignore": 6
     },
     "fileHeartbeats": {
-        "config/dbconnect.js": 60,
+        "config/dbconnect.js": 123,
         "package.json": 53,
-        "index.js": 325,
-        "models/User.js": 89,
-        "db/dbuser.js": 732,
+        "index.js": 559,
+        "models/User.js": 477,
+        "db/dbuser.js": 3407,
         ".gitignore": 6
     }
 }

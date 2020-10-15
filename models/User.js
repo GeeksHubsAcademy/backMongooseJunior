@@ -7,21 +7,11 @@ const UserSchema=mongoose.Schema({
     },
     email:{
         type:String,
-        required:true
-    },
-    phone:{
-        type:Number
-    },
-    billcard:{
-        type:Number,
+        unique: true,
         required:true
     },
     password:{
         type:String,
-        required:true
-    },
-    rank:{
-        type:Number,
         required:true
     }
 })
