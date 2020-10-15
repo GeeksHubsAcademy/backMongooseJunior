@@ -1,9 +1,9 @@
 {
     "idleHeartbeats": 5612,
-    "navigatingHeartbeats": 1348,
-    "totalCodingHeartbeats": 6052,
+    "navigatingHeartbeats": 1396,
+    "totalCodingHeartbeats": 6179,
     "languageHeartbeats": {
-        "javascript": 5867,
+        "javascript": 5994,
         "json": 134,
         "ignore": 6,
         "plaintext": 45
@@ -15,6 +15,7 @@
         "models/User.js": 477,
         "db/dbuser.js": 4492,
         ".gitignore": 6,
-        "d:\\GeeksHubs\\teaching\\mongoose\\mongoose1\\db\\dbuser.js.git": 45
+        "d:\\GeeksHubs\\teaching\\mongoose\\mongoose1\\db\\dbuser.js.git": 45,
+        "mw/cors.js": 127
     }
 }
