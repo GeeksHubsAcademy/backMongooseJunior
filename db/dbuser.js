@@ -2,6 +2,8 @@ const UserModel=require('../models/User');
 
 const mongoose=require('mongoose');
 
+const bcrypt = require("bcryptjs");
+
 const fs=require('fs');
 
 const showUsers = (req, res) => {
@@ -51,12 +53,16 @@ const registerUser = async (req, res) => {
 
     //fin de comprobacion inicial de errores
     
+    //encriptado de password
+    
+    let hashPass = await bcrypt.hash(bodyData.password, 10);
+
     try {
 		
         const user = await new UserModel({
 		    username: bodyData.username,
 		    email: bodyData.email,
-		    password: bodyData.password
+		    password: hashPass
         }).save();
 
         res.send({
@@ -131,6 +137,37 @@ const modifyUser = async (req, res) => {
 }
 
 const loginUser = async (req, res) => {
+
+    // let usuarioEncontrado = await UserModel.findOne({
+    //     $and : [
+    //         { email:  req.body.email}, { password: req.body.password }
+    //     ]
+    // })
+
+    let usuarioEncontrado = await UserModel.findOne({
+        email: req.body.email
+    });
+
+    if(!usuarioEncontrado){
+        res.send({
+            message: "No existe el usuario"
+        })
+    }else{
+
+        let passwordOk = await bcrypt.compare(req.body.password, usuarioEncontrado.password);
+
+        if(passwordOk){
+            res.send({
+                name: usuarioEncontrado.username,
+                email: usuarioEncontrado.email
+            })
+        }else{
+            res.send({
+                message: "Credenciales incorrectas"
+            })
+        }
+        
+    }
 
 }
 
